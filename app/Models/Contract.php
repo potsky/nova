@@ -15,7 +15,7 @@ class Contract extends Model
     {
         return $this->belongsToMany(Item::class)
             ->as('contractScope')
-//            ->using(ContractItem::class)
+            ->using(ContractItem::class)
             ->withPivot('id', 'role')
             ->withTimestamps();
     }
